@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)http://tubook.io/yourwebsite/index/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>Tubook manage system</title>
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <link rel="stylesheet" type="text/css" href="./static/layui.css" media="all">
+  <link rel="stylesheet" type="text/css" href="./static/layui_rewrite.css">
+  <link rel="stylesheet" type="text/css" href="./static/index.css">
+</head>
+<body layre-themealias="default" class="layui-layout-body">
+  <div id="LAY_app" class="layRe-tabspage-none">
+    <div class="layui-layout layui-layout-admin">
+      <div class="layui-header">
+        <!-- header area -->
+        <ul class="layui-nav layui-layout-left">
+          <li class="layui-nav-item layRe-flexible" lay-unselect="" onclick="shrink()">
+            <a href="javascript:;" layre-event="flexible" title="侧边伸缩">
+              <i class="layui-icon layui-icon-shrink-right" id="LAY_app_flexible"></i>
+            </a>
+          </li>
+                    <li class="layui-nav-item" lay-unselect="">
+            <a href="javascript:;" title="">
+              <cite>系统管理</cite>
+            <i class="layui-icon layui-icon-down layui-nav-more"></i></a>
+                        <dl class="layui-nav-child layui-anim layui-anim-upbit">              
+                              <dd data-name="" data-jump="/">
+                  <a href="javascript:;" onclick="menuLoad(&#39;/yourwebsite/basicconfig/index.html&#39;)" title="如数据库链接，网站后台链接等">
+                    <i class="layui-icon layui-icons layui-icon-set-fill"></i>&nbsp;基本配置                  </a>
+                </dd>
+                              <dd data-name="" data-jump="/">
+                  <a href="javascript:;" onclick="menuLoad(&#39;/yourwebsite/menu/index.html&#39;)" title="设置后台导航，及导航权限">
+                    <i class="layui-icon layui-icons layui-icon-spread-left"></i>&nbsp;导航权限                  </a>
+                </dd>
+                              <dd data-name="" data-jump="/">
+                  <a href="javascript:;" onclick="menuLoad(&#39;/yourwebsite/databack/index.html&#39;)" title="建议重大修改前备份">
+                    <i class="layui-icon layui-icons layui-icon-tabs"></i>&nbsp;数据备份                  </a>
+                </dd>
+                              <dd data-name="" data-jump="/">
+                  <a href="javascript:;" onclick="menuLoad(&#39;/yourwebsite/icon/index.html&#39;)" title="">
+                    <i class="layui-icon layui-icons layui-icon-set-fill"></i>&nbsp;图标管理                  </a>
+                </dd>
+                                       
+            </dl>
+             
+          </li>
+                    <li class="layui-nav-item" lay-unselect="">
+            <a href="javascript:;" title="">
+              <cite>人事管理</cite>
+            <i class="layui-icon layui-icon-down layui-nav-more"></i></a>
+                        <dl class="layui-nav-child layui-anim layui-anim-upbit">              
+                              <dd data-name="" data-jump="/">
+                  <a href="javascript:;" onclick="menuLoad(&#39;/yourwebsite/adminuser/index.html&#39;)" title="">
+                    <i class="layui-icon layui-icons layui-icon-username"></i>&nbsp;后台管理员                  </a>
+                </dd>
+                              <dd data-name="" data-jump="/">
+                  <a href="javascript:;" onclick="menuLoad(&#39;/yourwebsite/group/index.html&#39;)" title="">
+                    <i class="layui-icon layui-icons layui-icon-template-1"></i>&nbsp;权限分组                  </a>
+                </dd>
+                              <dd data-name="" data-jump="/">
+                  <a href="javascript:;" onclick="menuLoad(&#39;/yourwebsite/staff/index.html&#39;)" title="">
+                    <i class="layui-icon layui-icons layui-icon-set-fill"></i>&nbsp;员工管理                  </a>
+                </dd>
+                              <dd data-name="" data-jump="/">
+                  <a href="javascript:;" onclick="menuLoad(&#39;/yourwebsite/adminlog/index.html&#39;)" title="查看管理员操作日志">
+                    <i class="layui-icon layui-icons layui-icon-set-fill"></i>&nbsp;操作日志                  </a>
+                </dd>
+                                       
+            </dl>
+             
+          </li>
+                    <li class="layui-nav-item" lay-unselect="">
+            <a href="javascript:;" title="">
+              <cite>借书管理</cite>
+            <i class="layui-icon layui-icon-down layui-nav-more"></i></a>
+                        <dl class="layui-nav-child layui-anim layui-anim-upbit">              
+                              <dd data-name="" data-jump="/">
+                  <a href="javascript:;" onclick="menuLoad(&#39;/yourwebsite/booklending/index.html&#39;)" title="">
+                    <i class="layui-icon layui-icons layui-icon-export"></i>&nbsp;借书列表                  </a>
+                </dd>
+                                       
+            </dl>
+             
+          </li>
+                    <li class="layui-nav-item" lay-unselect="">
+            <a href="javascript:;" title="维护读者资料">
+              <cite>读者管理</cite>
+            <i class="layui-icon layui-icon-down layui-nav-more"></i></a>
+                        <dl class="layui-nav-child">              
+                              <dd data-name="" data-jump="/">
+                  <a href="javascript:;" onclick="menuLoad(&#39;/yourwebsite/user/index.html&#39;)" title="增加，删除，修改等">
+                    <i class="layui-icon layui-icons layui-icon-set-fill"></i>&nbsp;读者列表                  </a>
+                </dd>
+                                       
+            </dl>
+             
+          </li>
+                    <li class="layui-nav-item" lay-unselect="">
+            <a href="javascript:;" title="">
+              <cite>书籍管理</cite>
+            <i class="layui-icon layui-icon-down layui-nav-more"></i></a>
+                        <dl class="layui-nav-child">              
+                              <dd data-name="" data-jump="/">
+                  <a href="javascript:;" onclick="menuLoad(&#39;/yourwebsite/bookcate/index.html&#39;)" title="管理分类/位置">
+                    <i class="layui-icon layui-icons layui-icon-template"></i>&nbsp;分类管理                  </a>
+                </dd>
+                              <dd data-name="" data-jump="/">
+                  <a href="javascript:;" onclick="menuLoad(&#39;/yourwebsite/book/index.html&#39;)" title="">
+                    <i class="layui-icon layui-icons layui-icon-export"></i>&nbsp;图书管理                  </a>
+                </dd>
+                                       
+            </dl>
+             
+          </li>
+                    <li class="layui-nav-item" lay-unselect="">
+            <a href="javascript:;" title="">
+              <cite>网站管理</cite>
+            <i class="layui-icon layui-icon-down layui-nav-more"></i></a>
+                        <dl class="layui-nav-child">              
+                              <dd data-name="" data-jump="/">
+                  <a href="javascript:;" onclick="menuLoad(&#39;/yourwebsite/webadmin/langchoice.html&#39;)" title="以下菜单操作的网站语言">
+                    <i class="layui-icon layui-icons layui-icon-set-fill"></i>&nbsp;语言选择                  </a>
+                </dd>
+                              <dd data-name="" data-jump="/">
+                  <a href="javascript:;" onclick="menuLoad(&#39;/yourwebsite/webadmin/basic.html&#39;)" title="修改网站的基本信息">
+                    <i class="layui-icon layui-icons layui-icon-set-fill"></i>&nbsp;基本设置                  </a>
+                </dd>
+                              <dd data-name="" data-jump="/">
+                  <a href="javascript:;" onclick="menuLoad(&#39;/yourwebsite/webadmin/product.html&#39;)" title="修改网站的产品">
+                    <i class="layui-icon layui-icons layui-icons layui-icon-diamond"></i>&nbsp;产品管理                  </a>
+                </dd>
+                              <dd data-name="" data-jump="/">
+                  <a href="javascript:;" onclick="menuLoad(&#39;/yourwebsite/webadmin/about.html&#39;)" title="修改单页，如联系方式，关于我们等">
+                    <i class="layui-icon layui-icons layui-icon-about"></i>&nbsp;单页管理                  </a>
+                </dd>
+                              <dd data-name="" data-jump="/">
+                  <a href="javascript:;" onclick="menuLoad(&#39;/yourwebsite/webadmin/manage.html&#39;)" title="跳转到完整专业的网站内容管理系统">
+                    <i class="layui-icon layui-icons layui-icon-release"></i>&nbsp;完整后台                  </a>
+                </dd>
+                                       
+            </dl>
+             
+          </li>
+                    <li class="layui-nav-item" lay-unselect="">
+            <a href="javascript:;" title="管理客户/供应商等外部联系名片">
+              <cite>外联管理</cite>
+            <i class="layui-icon layui-icon-down layui-nav-more"></i></a>
+                        <dl class="layui-nav-child">              
+                              <dd data-name="" data-jump="/">
+                  <a href="javascript:;" onclick="menuLoad(&#39;/yourwebsite/cussup/customer.html&#39;)" title="客户维护表">
+                    <i class="layui-icon layui-icons layui-icon-set-fill"></i>&nbsp;客户                  </a>
+                </dd>
+                              <dd data-name="" data-jump="/">
+                  <a href="javascript:;" onclick="menuLoad(&#39;/yourwebsite/cussup/supplier.html&#39;)" title="供应商维护">
+                    <i class="layui-icon layui-icons layui-icon-set-fill"></i>&nbsp;供应商                  </a>
+                </dd>
+                                       
+            </dl>
+             
+          </li>
+                    <li class="layui-nav-item" lay-unselect="">
+            <a href="javascript:;" title="">
+              <cite>软件市场</cite>
+            <i class="layui-icon layui-icon-down layui-nav-more"></i></a>
+                        <dl class="layui-nav-child">              
+                              <dd data-name="" data-jump="/">
+                  <a href="javascript:;" onclick="menuLoad(&#39;http://www.xxxxxx.com/market/list-hk-1.html&#39;)" title="增加功能">
+                    <i class="layui-icon layui-icons layui-icon-set-fill"></i>&nbsp;插件市场                  </a>
+                </dd>
+                              <dd data-name="" data-jump="/">
+                  <a href="javascript:;" onclick="menuLoad(&#39;http://www.xxxxxx.com/market/list-hk-2.html&#39;)" title="">
+                    <i class="layui-icon layui-icons layui-icon-set-fill"></i>&nbsp;软件市场                  </a>
+                </dd>
+                              <dd data-name="" data-jump="/">
+                  <a href="javascript:;" onclick="menuLoad(&#39;http://www.xxxxxx.com/market/list-hk-3.html&#39;)" title="寻找相关服务">
+                    <i class="layui-icon layui-icons layui-icon-set-fill"></i>&nbsp;服务市场                  </a>
+                </dd>
+                                       
+            </dl>
+             
+          </li>
+                  <span class="layui-nav-bar" style="left: 0px; width: 0px; opacity: 0;"></span></ul>
+        <ul class="layui-nav layui-layout-right" lay-filter="layRe-layout-right">
+          <li class="layui-nav-item layui-hide-xs" lay-unselect="" title="全屏" onclick="fullScreen()">
+            <a href="javascript:;" layre-event="fullscreen">
+              <i class="layui-icon layui-icon-screen-full"></i>
+            </a>
+
+          </li>
+          <li class="layui-nav-item" lay-unselect="">
+            <a href="javascript:;">
+              <cite>超级管理员:admin</cite>
+            <i class="layui-icon layui-icon-down layui-nav-more"></i></a>
+            <dl class="layui-nav-child">
+              <dd><a href="javascript:;" onclick="clearAll()">清除缓存</a></dd>
+              <dd><a href="javascript:;" onclick="menuLoad(&#39;/yourwebsite/adminuser/amend.html&#39;)">个人中心</a></dd>              
+              <dd onclick="logout(&#39;/yourwebsite/login/loginout.html&#39;)">
+                <a lay-href="">退出</a>
+              </dd>
+            </dl>
+          </li>
+        <span class="layui-nav-bar"></span></ul>
+      </div>
+      <!-- left menu -->
+      <div class="layui-side layui-side-menu">
+        <div class="layui-side-scroll">
+          <div class="layui-logo" lay-href="">
+            <span><a href="http://tubook.io/yourwebsite/index/index.html" title="图书借阅管理系统">Tubook</a></span>
+          </div>
+          <ul class="layui-nav layui-nav-tree" lay-shrink="all" id="LAY-system-side-menu" lay-filter="layRe-system-side-menu">
+                        <li data-name="" data-jump="" class="layui-nav-item">
+              <a href="javascript:;" lay-tips="系统管理" lay-direction="2" title="">
+                <i class="layui-icon layui-icons layui-icon-set-fill"></i>
+                <cite>系统管理</cite>
+              <i class="layui-icon layui-icon-down layui-nav-more"></i></a>
+                            <dl class="layui-nav-child">
+                                <dd data-name="" data-jump="/">
+                  <a href="javascript:;" onclick="menuLoad(&#39;/yourwebsite/basicconfig/index.html&#39;)" title="如数据库链接，网站后台链接等">
+                    <i class="layui-icon layui-icons layui-icon-set-fill"></i>基本配置                  </a>
+                </dd>
+                                <dd data-name="" data-jump="/">
+                  <a href="javascript:;" onclick="menuLoad(&#39;/yourwebsite/menu/index.html&#39;)" title="设置后台导航，及导航权限">
+                    <i class="layui-icon layui-icons layui-icon-spread-left"></i>导航权限                  </a>
+                </dd>
+                                <dd data-name="" data-jump="/">
+                  <a href="javascript:;" onclick="menuLoad(&#39;/yourwebsite/databack/index.html&#39;)" title="建议重大修改前备份">
+                    <i class="layui-icon layui-icons layui-icon-tabs"></i>数据备份                  </a>
+                </dd>
+                                <dd data-name="" data-jump="/">
+                  <a href="javascript:;" onclick="menuLoad(&#39;/yourwebsite/icon/index.html&#39;)" title="图标管理">
+                    <i class="layui-icon layui-icons layui-icon-set-fill"></i>图标管理                  </a>
+                </dd>
+                              </dl>
+                          </li>
+                        <li data-name="" data-jump="" class="layui-nav-item">
+              <a href="javascript:;" lay-tips="人事管理" lay-direction="2" title="">
+                <i class="layui-icon layui-icons layui-icon-user"></i>
+                <cite>人事管理</cite>
+              <i class="layui-icon layui-icon-down layui-nav-more"></i></a>
+                            <dl class="layui-nav-child">
+                                <dd data-name="" data-jump="/">
+                  <a href="javascript:;" onclick="menuLoad(&#39;/yourwebsite/adminuser/index.html&#39;)" title="后台管理员">
+                    <i class="layui-icon layui-icons layui-icon-username"></i>后台管理员                  </a>
+                </dd>
+                                <dd data-name="" data-jump="/">
+                  <a href="javascript:;" onclick="menuLoad(&#39;/yourwebsite/group/index.html&#39;)" title="权限分组">
+                    <i class="layui-icon layui-icons layui-icon-template-1"></i>权限分组                  </a>
+                </dd>
+                                <dd data-name="" data-jump="/">
+                  <a href="javascript:;" onclick="menuLoad(&#39;/yourwebsite/staff/index.html&#39;)" title="员工管理">
+                    <i class="layui-icon layui-icons layui-icon-set-fill"></i>员工管理                  </a>
+                </dd>
+                                <dd data-name="" data-jump="/">
+                  <a href="javascript:;" onclick="menuLoad(&#39;/yourwebsite/adminlog/index.html&#39;)" title="查看管理员操作日志">
+                    <i class="layui-icon layui-icons layui-icon-set-fill"></i>操作日志                  </a>
+                </dd>
+                              </dl>
+                          </li>
+                        <li data-name="" data-jump="" class="layui-nav-item">
+              <a href="javascript:;" lay-tips="借书管理" lay-direction="2" title="">
+                <i class="layui-icon layui-icons layui-icon-export"></i>
+                <cite>借书管理</cite>
+              <i class="layui-icon layui-icon-down layui-nav-more"></i></a>
+                            <dl class="layui-nav-child">
+                                <dd data-name="" data-jump="/">
+                  <a href="javascript:;" onclick="menuLoad(&#39;/yourwebsite/booklending/index.html&#39;)" title="借书列表">
+                    <i class="layui-icon layui-icons layui-icon-export"></i>借书列表                  </a>
+                </dd>
+                              </dl>
+                          </li>
+                        <li data-name="" data-jump="" class="layui-nav-item">
+              <a href="javascript:;" lay-tips="读者管理" lay-direction="2" title="维护读者资料">
+                <i class="layui-icon layui-icons layui-icon-user"></i>
+                <cite>读者管理</cite>
+              <i class="layui-icon layui-icon-down layui-nav-more"></i></a>
+                            <dl class="layui-nav-child">
+                                <dd data-name="" data-jump="/">
+                  <a href="javascript:;" onclick="menuLoad(&#39;/yourwebsite/user/index.html&#39;)" title="增加，删除，修改等">
+                    <i class="layui-icon layui-icons layui-icon-set-fill"></i>读者列表                  </a>
+                </dd>
+                              </dl>
+                          </li>
+                        <li data-name="" data-jump="" class="layui-nav-item">
+              <a href="javascript:;" lay-tips="书籍管理" lay-direction="2" title="">
+                <i class="layui-icon layui-icons layui-icon-template-1"></i>
+                <cite>书籍管理</cite>
+              <i class="layui-icon layui-icon-down layui-nav-more"></i></a>
+                            <dl class="layui-nav-child">
+                                <dd data-name="" data-jump="/">
+                  <a href="javascript:;" onclick="menuLoad(&#39;/yourwebsite/bookcate/index.html&#39;)" title="管理分类/位置">
+                    <i class="layui-icon layui-icons layui-icon-template"></i>分类管理                  </a>
+                </dd>
+                                <dd data-name="" data-jump="/">
+                  <a href="javascript:;" onclick="menuLoad(&#39;/yourwebsite/book/index.html&#39;)" title="图书管理">
+                    <i class="layui-icon layui-icons layui-icon-export"></i>图书管理                  </a>
+                </dd>
+                              </dl>
+                          </li>
+                        <li data-name="" data-jump="" class="layui-nav-item">
+              <a href="javascript:;" lay-tips="网站管理" lay-direction="2" title="">
+                <i class="layui-icon layui-icons layui-icon-home"></i>
+                <cite>网站管理</cite>
+              <i class="layui-icon layui-icon-down layui-nav-more"></i></a>
+                            <dl class="layui-nav-child">
+                                <dd data-name="" data-jump="/">
+                  <a href="javascript:;" onclick="menuLoad(&#39;/yourwebsite/webadmin/langchoice.html&#39;)" title="以下菜单操作的网站语言">
+                    <i class="layui-icon layui-icons layui-icon-set-fill"></i>语言选择                  </a>
+                </dd>
+                                <dd data-name="" data-jump="/">
+                  <a href="javascript:;" onclick="menuLoad(&#39;/yourwebsite/webadmin/basic.html&#39;)" title="修改网站的基本信息">
+                    <i class="layui-icon layui-icons layui-icon-set-fill"></i>基本设置                  </a>
+                </dd>
+                                <dd data-name="" data-jump="/">
+                  <a href="javascript:;" onclick="menuLoad(&#39;/yourwebsite/webadmin/product.html&#39;)" title="修改网站的产品">
+                    <i class="layui-icon layui-icons layui-icons layui-icon-diamond"></i>产品管理                  </a>
+                </dd>
+                                <dd data-name="" data-jump="/">
+                  <a href="javascript:;" onclick="menuLoad(&#39;/yourwebsite/webadmin/about.html&#39;)" title="修改单页，如联系方式，关于我们等">
+                    <i class="layui-icon layui-icons layui-icon-about"></i>单页管理                  </a>
+                </dd>
+                                <dd data-name="" data-jump="/">
+                  <a href="javascript:;" onclick="menuLoad(&#39;/yourwebsite/webadmin/manage.html&#39;)" title="跳转到完整专业的网站内容管理系统">
+                    <i class="layui-icon layui-icons layui-icon-release"></i>完整后台                  </a>
+                </dd>
+                              </dl>
+                          </li>
+                        <li data-name="" data-jump="" class="layui-nav-item">
+              <a href="javascript:;" lay-tips="外联管理" lay-direction="2" title="管理客户/供应商等外部联系名片">
+                <i class="layui-icon layui-icons layui-icon-set-fill"></i>
+                <cite>外联管理</cite>
+              <i class="layui-icon layui-icon-down layui-nav-more"></i></a>
+                            <dl class="layui-nav-child">
+                                <dd data-name="" data-jump="/">
+                  <a href="javascript:;" onclick="menuLoad(&#39;/yourwebsite/cussup/customer.html&#39;)" title="客户维护表">
+                    <i class="layui-icon layui-icons layui-icon-set-fill"></i>客户                  </a>
+                </dd>
+                                <dd data-name="" data-jump="/">
+                  <a href="javascript:;" onclick="menuLoad(&#39;/yourwebsite/cussup/supplier.html&#39;)" title="供应商维护">
+                    <i class="layui-icon layui-icons layui-icon-set-fill"></i>供应商                  </a>
+                </dd>
+                              </dl>
+                          </li>
+                        <li data-name="" data-jump="" class="layui-nav-item">
+              <a href="javascript:;" lay-tips="软件市场" lay-direction="2" title="">
+                <i class="layui-icon layui-icons layui-icon-app"></i>
+                <cite>软件市场</cite>
+              <i class="layui-icon layui-icon-down layui-nav-more"></i></a>
+                            <dl class="layui-nav-child">
+                                <dd data-name="" data-jump="/">
+                  <a href="javascript:;" onclick="menuLoad(&#39;http://www.xxxxxx.com/market/list-hk-1.html&#39;)" title="增加功能">
+                    <i class="layui-icon layui-icons layui-icon-set-fill"></i>插件市场                  </a>
+                </dd>
+                                <dd data-name="" data-jump="/">
+                  <a href="javascript:;" onclick="menuLoad(&#39;http://www.xxxxxx.com/market/list-hk-2.html&#39;)" title="软件市场">
+                    <i class="layui-icon layui-icons layui-icon-set-fill"></i>软件市场                  </a>
+                </dd>
+                                <dd data-name="" data-jump="/">
+                  <a href="javascript:;" onclick="menuLoad(&#39;http://www.xxxxxx.com/market/list-hk-3.html&#39;)" title="寻找相关服务">
+                    <i class="layui-icon layui-icons layui-icon-set-fill"></i>服务市场                  </a>
+                </dd>
+                              </dl>
+                          </li>
+                       
+          <span class="layui-nav-bar"></span></ul>
+        </div>
+      </div>
+      <!-- Content -->
+      <div class="layui-body" id="LAY_app_body">
+        <div class="layRe-tabsbody-item layui-show">
+          <div class="layui-fluid">
+            <div class="layui-card" style="height: 593px;">
+              <div class="layui-fluid">
+	      <h2>感谢使用Tubook管理系统！</h2>	      
+	      <br>    
+	      <blockquote class="layui-elem-quote layui-text">
+	            Tubook管理系统之所以让人青睐，更多是在于它方便的定制开发能力。<br>
+	            程序当前版本号（1.1.0），如需商用，升级及二次开发(如：销售管理，仓储物流管理，财务管理等功能)，请联系我们！<br>
+	            联系邮箱：<a href="mailto:sales09877@outlook.com">paul83@foxmail.com</a><br><br>
+	            <a href="http://tushu.io/yourwebsite/index/contact.html" class="layui-btn">联系我们</a>
+	            <button href="" class="layui-btn layui-btn-danger" onclick="shouquan(&quot;LhuGgaZlTKQrtKPk18ximQPRhLF5hcEUhQSFwJAKnLjOhc5RjNTorFOwlKFCPReFdMmMcOv7sIPElP-Bs&quot;)">授权查询</button>
+	            <a href="http://tushu.io/yourwebsite/index/contact.html" class="layui-btn">系统升级</a>
+	      </blockquote>
+	      <br>
+
+	      <div class="layui-row layui-col-space10">
+
+	      	<div class="layui-col-sm12 layui-col-md6">
+		      <div class="layui-card layui-panel">
+		        <div class="layui-card-header">
+		          <h3>统计数据</h3>
+		        </div>
+		        <div class="layui-card-body">
+		        读 者：<a href="http://tushu.io/yourwebsite/user/index.html">3</a> 位<hr>
+		        图 书：<a href="http://tushu.io/yourwebsite/book/index.html">12</a> 种(同名同版只计算一次)<hr>
+		        借 阅：<a href="http://tushu.io/yourwebsite/booklending/index.html">3 次</a><hr>     
+		        其 它：<a class="layui-btn layui-btn-xs" href="http://tushu.io/yourwebsite/index/plusmarket.html">插件市场</a><a class="layui-btn layui-btn-xs" href="http://tushu.io/yourwebsite/index/softmarket.html">软件市场</a><a class="layui-btn layui-btn-xs" href="http://tushu.io/yourwebsite/index/servicemarket.html">服务市场</a><hr>
+		        联系Email：<a href="mailto:sales09877@outlook.com">sales09877@outlook.com</a><hr>
+		        </div>
+		      </div>
+		    </div>	
+
+	      	<div class="layui-col-sm12 layui-col-md6">
+		      <div class="layui-card layui-panel">
+		        <div class="layui-card-header">
+		          <h3>系统声明</h3>
+		        </div>
+		        <div class="layui-card-body">
+			        程序名称(版本)：Tubook(1.1.0)<br>
+					开发者：Gang Feng<br>
+					E-mail：sales09877@outlook.com  QQ:1990630543<br>
+					1：本程序授权使用！如经原作者同意，可免费使用。<br>
+					2：未经作者授权使用，保留对其追究法律责任的权利！<br>
+					3：如需授权，请联系作者！<br>
+					4：内容/插件/应用等均为使用者自行上传，与本程序及作者无关。<br>
+					5：此版本为开源项目，您可以修改后开源或闭源发布均可。<br>
+					6：如不同意以上声明，请自行停止使用本程序, 否则视为同意以上声明。<br>
+		        </div>
+		      </div> 
+		    </div>	      		    
+
+	     </div>
+
+		</div>      
+	<!-- layui js -->
+	<script type="text/javascript" src="./layui.js"></script>
+	<script>
+		layui.use(['layer','jquery'], function(){
+			$ = layui.jquery;
+			layer = layui.layer;
+		});
+	</script>
+	
+
+
+<script>
+	//shouquan check
+	function shouquan($token){
+		$.post(
+			"/yourwebsite/index/checkurl.html",{token:$token},function(res){
+				console.log(res);
+				if(res.code==0){
+					layer.msg(res.msg,{'icon':2});							
+				}else{
+					layer.msg(res.msg,{'icon':1});
+				}
+			},'json');		
+	}
+</script>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Auxiliary elements, generally used for the lower mask of mobile devices -->
+      <div class="layRe-body-shade" layre-event="shade" onclick="shrink()"></div>
+    </div>
+  </div>  
+  <script type="text/javascript" src="./static/layui.js"></script>
+  <script type="text/javascript" src="./static/index.js"></script>
+  <script>
+    layui.use(['element','layer','jquery'], function(){
+      element = layui.element;
+      $ = layui.jquery;
+      layer = layui.layer;
+      setter = layui.setter;
+      resetMainHeight($("iframe"));
+    });
+    // content height
+    function resetMainHeight(obj){
+      var height = parent.document.documentElement.clientHeight - 60; //top+padding
+      if (height<550) height=550;
+      $(obj).parent('div').height(height);
+    }
+    // click menu
+    function menuLoad(obj){
+      $('iframe').attr('src',obj);
+      var width = screen();
+      if(width < 2){
+        shrink();
+      }
+    }
+    // logout
+    function logout(){
+      layer.confirm('确定要退出吗', {
+        icon:3,
+        btn: ['确定','取消']
+      }, function(){
+        $.get("/yourwebsite/login/logout.html",'',function(res){
+          if(res.code>0){
+            layer.msg(res.msg,{'icon':1});
+            setTimeout(function(){window.location.href="/yourwebsite/login/index.html";},1000);     
+          }else{
+            layer.msg(res.msg,{'icon':2});            
+          }
+        },'json');
+      });
+    }
+  //clear cache
+  function clearAll(){
+    $.get("/yourwebsite/adminuser/clearrunfile.html",'',function(res){
+          if(res.code>0){
+            layer.msg(res.msg,{'icon':1});                
+          }else{
+            layer.msg(res.msg,{'icon':2});            
+          }
+        },'json');
+  }
+  </script>
+
+</body></html>
